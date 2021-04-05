@@ -407,7 +407,7 @@ overflow:hidden;
 <p id="audtimerp">
 <span id="let1">0</span>:<span id="let2">0</span><span id="let3">0</span>
 </p>
-  <div id = circlein>
+  <div id="circlein" class="hide">
   <!-- inside circle-->
   </div>
   <div id = circleout>
@@ -830,6 +830,7 @@ rs.classList.add('hide');
   }
   
   function record(){
+  
   audapp.classList.remove('hide');
   state.current = 6;
   cxt.fillStyle = "white";
@@ -852,7 +853,7 @@ rs.classList.add('hide');
       audioChunks.push(event.data);
     });
     audioChunks = [];
-    circlein.classList.add('hide');
+      circlein.classList.remove('hide');
      pausenoob.classList.remove('hide');
     //
      //rob = true;
@@ -862,8 +863,7 @@ rs.classList.add('hide');
     
     
     pausenoob.addEventListener('click',function(){
-    start.disabled = false;
-    stop.disabled = false;
+
     //rob = false;
     mediaRecorder.stop();
     console.log("recording has stoped");
@@ -878,10 +878,7 @@ rs.classList.add('hide');
       audioChunks = [];
     });
     
-    currentTime.addEventListener('change', function(){
-aud1.currentTime = currentTime.max / currentTime.val / 100;
-aud1.play()
-})
+
   });
   
   
