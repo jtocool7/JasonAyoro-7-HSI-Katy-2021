@@ -1,84 +1,875 @@
-<style>
-  #start{
-    position:absolute;
-    top:100px;
-    left:300px;
-    border-radius: 5px;
-    border: 1px solid;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Simulator</title>
+  <style>
+  *{
+    font-family: calibri;
+    user-select:none
+  }
+  #cvs{
+    border:1px solid;
+     background:url("https://cdn57.androidauthority.net/wp-content/uploads/2020/07/galaxy-note-20-wallpaper-1.jpg");
+     width:563px;
+     height:1218px;
+     border-radius:50px;
   }
   
-  #stop{
+  .hide{
+    display:none;
+  }
+  
+  #one{
+    top:850px;
+    left:50px;
+  }
+  
+  #three{
+    top:850px;
+    left:450px;
+  }
+  
+  #two{
+    top:850px;
+    left:260px;
+  }
+  
+  #five{
+    top:920px;
+    left:260px;
+  }
+  
+  #six{
+    top:920px;
+    left:450px;
+  }
+  
+  #four{
+    top:920px;
+    left:50px;
+  }
+  
+  #seven{
+    top:990px;
+    left:50px;
+  }
+  
+  #nine{
+    top:990px;
+    left:450px;
+  }
+  
+  #eight{
+    top:990px;
+    left:260px;
+    
+  }
+  
+  #x{
+    top:1060px;
+    left:50px;
+    border-top:
+  }
+  
+  #ok{
+    top:1060px;
+   left:450px; 
+  }
+  
+  #zero{
+     top:1060px;
+    left:260px;
+  }
+  
+  
+  
+  .button{
+   
+    border-radius:50px;
+    width:110px;
+    height:110px;
+      display:flex;
+     justify-content:center;
+     align-items:center;
+     cursor:pointer;
+     font-size:35px;
+     color:white;
      position:absolute;
-    top:100px;
-    left:600px;
-    border-radius: 5px;
-    border: 1px solid;
+     
   }
   
-  #currentTime{
+  #p1{
+     position:absolute;
+    top:700px;
+    width:100px;
+    font-size:20px;
+    left:270px;
+  }
+  
+  
+  
+  #p2{
+     position:absolute;
+    top:750px;
+    width:290px;
+    font-size:20px;
+    left:180px;
+  }
+  
+  #show1{
+    background:white;
+    border-radius:50px;
     position:absolute;
-    top:500px;
+    top:820px;
+    width:320px;
+    height:30px;
+    left:140px;
+    font-size:20px;
+    text-align:center;
+    
   }
   
-
+  #slide{
+     width:200px;
+     height:7px;
+     background:white;
+     border-radius:4px;
+     position:absolute;
+     top:1215px;
+     left:190px;
+   
+     
+   }
+   
+  
+   
+   #cam{
+     position:absolute;
+     width:39px;
+     height:39px;
+     border-radius:50px;
+     background:black;
+     top:10px;
+     left:276.11px;
+   }
+   
+   #lock{
+     position:absolute;
+     top:90px;
+     width:50px;
+     height:80px;
+   }
+   
+   #status{
+     width:100px;
+     position:absolute;
+     top:20px;
+     left:400px;
+   }
+   
+   #T{
+     position:absolute;
+     top:15px;
+     left:50px;
+   }
+   
+   #stu{
+     position:absolute;
+     top:1000px;
+     left:215px;
+     font-size:25px;
+     
+   }
+   
+   #clock{
+     font-size:50px;
+     position:absolute;
+     top:450px;
+     left:250px;
+   }
+   
+   #fd{
+     font-size:25px;
+     width:500px;
+     position:absolute;
+     top:500px;
+     left:190px;
+   }
+   
+   #edge{
+    
+     position:absolute;
+     left:550px;
+     top:100px;
+     width:23px;
+overflow:hidden;
+   
+   }
+   
+   #edgecon{
+    opacity:0.7;
+     
+     width:50px;
+     height:150px;
+     border-radius:50px;
+      background:#CDCDCD;
+   }
+   
+   #camlogo{
+     width:60px;
+     position:absolute;
+     top:1100px;
+     left:470px;
+   }
+   
+   #video{
+     height:415px;
+     width:550px;
+     border:2px solid white;
+     border-radius:5px;
+     position:absolute;
+     top:370px;
+     left:13px;
+   }
+   
+   #iedge{
+     width:120px;
+     height:700px;
+     background:#CDCDCD;
+     border-radius:50px;
+     position:absolute;
+     top:200px;
+     opacity:0.9;
+     left:400px;
+     z-index:1;
+   }
   
   
-</style>
+  #clock2{
+    width:90px;
+    position:absolute;
+    top:50px;
+    left:15px;
+  }
+  
+  #chrome{
+    width:110px;
+    position:absolute;
+    top:150px;
+    left:10px;
+  }
+  
+  #gmail{
+    width:160px;
+    position:absolute;
+    top:230px;
+    left:-15px;
+    
+  }
+  
+  #vc{
+    width:100px;
+    position:absolute;
+    top:490px;
+    left:10px;
+    
+  }
+   
+ #gmaps{
+   
+   position:absolute;
+   top:90px;
+   left:40px;
+   width:500px;
+   border:2px solid;
+   border-radius:10px;
+   height:1100px;
+ }
+ 
+ #gmi{
+   width:110px;
+   position:absolute;
+   top:350px;
+   left:10px;
+ }
+ 
+ #pict{
+   width:285px;
+   height:200px;
+  
+   position:absolute;
+   top:850px;
+   left:150px;
+ }
+ 
+ #camp{
+   width:50px;
+   height:50px;
+   background:white;
+   border-radius: 50px;
+   position:absolute;
+   top:1100px;
+   left:270px;
+ }
+ 
+ #sstomp{
+   position:absolute;
+   top:500px;
+   font-size:20px;
+   left:50px;
+ }
+ 
+ #circleout{
+   width:70px;
+   height:70px;
+   border-radius:50px;
+   border: 2px solid black;
+   position:absolute;
+   top:1100px;
+   left:260px;
+ }
+ 
+ #circlein{
+   width:50px;
+   height:50px;
+   border-radius:50px;
+  
+   position:absolute;
+   top:1113px;
+   left:272px;
+   background-color:#e3242b;
+ }
+ 
+ #pausenoob{
+   width:50px;
+   height:50px;
+   border-radius:50px;
+  
+   position:absolute;
+   top:1113px;
+   left:272px;
+   background-color:#e3242b;
+ }
+ 
+ #aud1{
+   position:absolute;
+   top:700px;
+   left:140px;
+ }
+ 
+#aud2{
+   position:absolute;
+   top:800px;
+   left:140px;
+ }
+ 
+#aud3{
+   position:absolute;
+   top:900px;
+   left:140px;
+ }
+ 
+ #let1{
+   font-size:90px;
+ }
+ 
+#let2{
+   font-size:90px;
+ }
+ 
+#let3{
+   font-size:90px;
+ }
+ 
+#audtimerp{
+  font-size:90px;
+  position:absolute;
+  top:300px;
+  left:210px;
+}
+ 
+ 
+   
+   
+  
+  </style>
+</head>
+<body>
+  <canvas id=cvs>
+    
+  </canvas>
+  <div id=audapp class="hide">
+  <!-- full audio app-->
+  <audio id="aud1" src="" controls></audio>
+  <audio id="aud2" src="" controls></audio>
+  <audio id="aud3" src="" controls></audio>
+<p id="audtimerp">
+<span id="let1">0</span>:<span id="let2">0</span><span id="let3">0</span>
+</p>
+  <div id="circlein" >
+  <!-- inside circle-->
+  </div>
+  <div id = circleout>
+  <!-- outside circle-->
+  </div>
+ 
+  </div>
+  
+  
+   <img class="hide" id="pausenoob" src="https://cdn.discordapp.com/attachments/809210836413448235/824379844741431306/unnamed.png" alt="pause?" width="50px">
+  <div id=sstomp class="hide">
+  <p>
+ <b> BECASUE THIS IS YOUR 1ST TIME SETUP  THE PASSWORD <br>YOU  PUT NOW WILL BE YOUR PASSWORD FOREVER</b>
+  </p>
+  </div>
+  <iframe class=hide id=gmaps src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.1503819264803!2d-77.03871848491536!3d38.89767627957066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2sThe%20White%20House!5e0!3m2!1sen!2sus!4v1610565433976!5m2!1sen!2sus"  frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  <canvas id=pict>
+  
+  </canvas>
+  
+  <div id="camp" onclick="tp()" class=hide></div>
+  
+  <div class=hide id=iedge>
+  
+  <img id="gmi" onclick="gmif()" src="https://i.redd.it/lclr2bm9cyf41.png" alt="gmapsicon">
+  <img id=clock2 src="https://androidapksfree.com/wp-content/uploads/2017/12/Samsung-Clock-APK-1.png" alt="clock">
+  
+  <img id=chrome src="https://1000logos.net/wp-content/uploads/2017/08/Chrome-Logo-768x626.png" alt="chrome">
+  
+  <img id=gmail src="https://1000logos.net/wp-content/uploads/2018/05/Gmail-logo.png" alt="gmail">
+  
+  <img onclick = "record()" id = vc src="https://www.apkmirror.com/wp-content/uploads/2021/01/54/601186da9c180.png" alt="samsung voice recorder">
+  </div>
+  
+  <div id=cam>
+  <p>
+  
+  </p>
+  </div>
+  <div  id=rs>
+  <img onclick=camapp() id=camlogo src="https://androidapksfree.com/wp-content/uploads/2018/04/Samsung-Camera-APK-2.png" alt="camera logo">
+  <div id=stu>
+  Swipe to unlock
+  </div>
+  <div id="clock">
+    <span id="hour"></span>:<span id="minute"></span>
+    </div>
+    <div id=fd>
+   <span id=day></span> <span id=mon></span> <span id=date></span>
+    </div>
+    
+  </div>
+ <div id=campa>
+ <video class=hide autoplay=true id=video>
+ </video>
+ </div>
+   <!-- <img id=lock src="https://cdn.discordapp.com/attachments/743458313089581079/798564523615060009/camera.png" alt="lock"> -->
+    <img id=status src="https://cdn.discordapp.com/attachments/743458313089581079/798616568803491848/cam.png" alt="status">
+    <div id=T>
+    T-Mobile
+    </div>
+  <div id= fullPass class=hide>
 
-<button id=start>Start Recording</button>
-<button id=stop >Stop Recording</button>
-<audio id=aud1 src="" controls></audio>
-<audio id= aud2 src="" controls></audio>
-<audio id= aud3 src="" controls></audio>
-<input id=currentTime type="range" value = 0 max = 100>
-<script>
-var audfrof = 1;
-var url1 = true;
-var url2 = false;
-var url3 = false;
-var check1st = false;
-const stop = document.getElementById('stop');
-var audioChunks = [];
-navigator.mediaDevices.getUserMedia({ audio: true })
+  <div id=show1>
+        <p>
+        
+        </p>
+  </div>
+  <div id=enterpin>
+  <p id=p1>
+  Enter Pin
+  </p>
+ 
+  <p id = p2>
+  Your Pin Must Contain 4 Digits
+  </p>
+  </div>
+  <div id=startScreen>
+  <div id=one class=button onclick = "vibrate(500), one = true, two = false, three = false, four = false, five = false, six = false, seven = false, eight = false, nine = false, zero = false,pasbox()">
+  1
+  </div>
+  <div id=two class=button onclick = "vibrate(500), one = false, two = true, three = false, four = false, five = false, six = false, seven = false, eight = false, nine = false, zero = false,pasbox()">
+  2
+  </div>
+  <div id=three class=button onclick = "vibrate(500), one = false, two = false, three = true, four = false, five = false, six = false, seven = false, eight = false, nine = false,zero = false, pasbox()">
+  3
+  </div>
+  <div id=four class=button onclick = "vibrate(500), one = false, two = false, three = false, four = true, five = false, six = false, seven = false, eight = false, nine = false,zero = false, pasbox()">
+  4
+  </div>
+  <div id=five class=button onclick = "vibrate(500), one = false, two = false, three = false, four = false, five = true, six = false, seven = false, eight = false, nine = false,zero = false, pasbox()">
+  5
+  </div>
+  <div id=six class=button onclick = "vibrate(500), one = false, two = false, three = false, four = false, five = false, six = true, seven = false, eight = false, nine = false,zero = false, pasbox()">
+  6
+  </div>
+  <div id=seven class=button onclick = "vibrate(500), one = false, two = false, three = false, four = false, five = false, six = false, seven = true, eight = false, nine = false,zero = false, pasbox()">
+  7
+  </div>
+  <div id=eight class=button onclick = "vibrate(500), one = false, two = false, three = false, four = false, five = false, six = false, seven = false, eight = true, nine = false,zero = false, pasbox()">
+  8
+  </div>
+  <div id=nine class=button onclick = "vibrate(500), one = false, two = false, three = false, four = false, five = false, six = false, seven = false, eight = false, nine = true,zero = false, pasbox()">
+  9
+  </div>
+  <div id=x class=button onclick = "vibrate(500), pasbox()">
+  x
+  </div>
+  <div id=zero class = button onclick = "vibrate(500), one = false, two = false, three = false, four = false, five = false, six = false, seven = false, eight = false, nine = false, zero = true, pasbox()">
+  0
+  </div>
+  <div id=ok class=button onclick = "vibrate(500), one = false, two = false, three = false, four = false, five = false, six = false, seven = false, eight = false, nine = false,zero = false, ok = true, pasbox()">
+   OK 
+  </div>
+  </div>
+  </div>
+  <div id=slide>
+  <p>
+  
+  </p>
+  </div>
+  
+  <div id=edge>
+<div id=edgecon>
+   </div>
+  </div>
+   
+
+  
+  <script>
+
+ const circlein = document.getElementById('circlein');
+
+  var audioChunks = [];
+  const cvs = document.getElementById('cvs');
+  const cxt = cvs.getContext('2d');
+  // conts
+  const state = { 
+  current:0.1,
+  frstart:0.1,
+  start : 0,
+  norm : 1,
+  discover : 2,
+  app : 3,
+  camapp : 4,
+  maps:5,
+  voicerecorder: 6,
+  }
+  
+  const audState = {
+  current: 0,
+  start: 0,
+  pause:1,
+  }
+  
+  var audtimer = 0;
+  
+  //swipe
+  cvs.addEventListener("touchstart", startTouch, false);
+cvs.addEventListener("touchmove", moveTouch, false);
+ 
+// Swipe Up / Down / Left / Right
+var initialX = null;
+var initialY = null;
+var tt1 = false;
+ 
+function startTouch(e) {
+  initialX = e.touches[0].clientX;
+  initialY = e.touches[0].clientY;
+};
+ 
+function moveTouch(e) {
+  if (initialX === null) {
+    return;
+  }
+ 
+  if (initialY === null) {
+    return;
+  }
+ 
+  var currentX = e.touches[0].clientX;
+  var currentY = e.touches[0].clientY;
+ 
+  var diffX = initialX - currentX;
+  var diffY = initialY - currentY;
+  
+ 
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    // sliding horizontally
+    if (diffX > 0) {
+      // swiped left
+      console.log("swiped left");
+    } else {
+      // swiped right
+      console.log("swiped right");
+    }  
+  } else {
+    // sliding vertically
+    if (diffY > 0) {
+      // swiped up
+      if(state.current == 0.1){
+      state.current = 0;
+      
+      }
+      
+       
+      if(state.current == 0 && tt1 == true){
+      state.current = 0;
+      }
+      
+      if(state.current == 4 && startt == true || state.current == 5 && startt == true){
+      state.current = 0.1
+      cxt.clearRect(0,0,cvs.width,cvs.height);
+      video.classList.add('hide');
+       gmaps.classList.add('hide');
+       pict.classList.add('hide');
+       camp.classList.add('hide');
+      }
+      
+      if(state.current == 4 && startt == false || state.current == 5 && startt == false){
+      state.current = 1
+      cxt.clearRect(0,0,cvs.width,cvs.height);
+      video.classList.add('hide');
+       gmaps.classList.add('hide');
+       pict.classList.add('hide');
+       camp.classList.add('hide');
+      }
+      console.log("swiped up");
+     
+      
+    } else {
+      // swiped down
+      console.log("swiped down");
+      if(state.current == 4 && startt == true || state.current == 5 && startt == true){
+      state.current = 0.1
+      cxt.clearRect(0,0,cvs.width,cvs.height);
+      video.classList.add('hide');
+       gmaps.classList.add('hide');
+       pict.classList.add('hide');
+       camp.classList.add('hide');
+      }
+      
+      if(state.current == 4 && startt == false || state.current == 5 && startt == false){
+      state.current = 1
+      cxt.clearRect(0,0,cvs.width,cvs.height);
+      video.classList.add('hide');
+       gmaps.classList.add('hide');
+       pict.classList.add('hide');
+       camp.classList.add('hide');
+      }
+      if(state.current == 0){
+      state.current = 0.1;
+      }
+    }  
+  }
+ 
+  initialX = null;
+  initialY = null;
+   
+  e.preventDefault();
+};
+
+///////////////////////////////////////// line
+
+  slide.addEventListener('touchstart', handleTouchStart, false);        
+slide.addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;                                                        
+var yDown = null;
+
+function getTouches(evt) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            console.log('left swipe')
+        } else {
+            /* right swipe */
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* up swipe */ 
+            console.log('upswipe')
+        } else { 
+            /* down swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
+  // variables
+  var maxnum = 13;
+  var startnum = 0;
+  var passenter = null;
+  var t1 = 0;
+
+  
+  function pasbox(){
+  if(t1 <= 23){
+  if(one == true){
+  show1.textContent += "1"
+  t1 += 1;
+  }
+  if(two == true){
+  show1.textContent += "2";
+  t1 += 1;
+  }
+  if(three == true){
+  show1.textContent += "3";
+  t1 += 1;
+  }
+  if(four == true){
+  show1.textContent += "4";
+  t1 += 1;
+  }
+  if(five == true){
+  show1.textContent += "5";
+  t1 += 1;
+  }
+  if(six == true){
+  show1.textContent += "6";
+  t1 += 1;
+  }
+  if(seven == true){
+  show1.textContent += "7";
+  t1 += 1;
+  }
+  if(eight == true){
+  show1.textContent += "8";
+  t1 += 1;
+  }
+  if(nine == true){
+  show1.textContent += "9";
+  t1 += 1;
+  }
+  if(zero == true){
+   show1.textContent += "0";
+  t1 += 1;
+  }
+  if(ok == true){
+  state.current = 1;
+  }
+  }
+  
+  
+  }
+  
+var rob = null;
+  
+  
+  function gmif(){
+  cxt.fillRect(0,0,cvs.width,cvs.height);
+  gmaps.classList.remove('hide');
+state.current = 5;
+stu.classList.add('hide');
+rs.classList.add('hide');
+  
+  }
+  
+  // localhost
+  var shelf = true;
+  
+  
+  // functions
+  function draw(){
+  
+  
+  if(state.current == 0.1){
+  sstomp.classList.add('hide');
+  rs.classList.remove('hide');
+  }
+  
+  if(state.current == 0){
+  fullPass.classList.remove('hide');
+  rs.classList.add('hide');
+  if(shelf == true){
+  sstomp.classList.remove('hide');
+  }
+  
+  
+  }
+  if(state.current == 0.1){
+  fullPass.classList.add('hide');
+  }
+  if(state.current == 4){
+  fullPass.classList.add('hide');
+  rs.classList.add('hide');
+  
+  }
+  if(state.current == 5){
+  cxt.fillRect(0,0,cvs.width,cvs.height);
+  fullPass.classList.add('hide');
+  rs.classList.add('hide');
+  }
+  if(state.current == 1){
+  fullPass.classList.add('hide');
+  shelf = false;
+  sstomp.classList.add('hide');
+  }
+  }
+  
+  function record(){
+  
+  audapp.classList.remove('hide');
+  state.current = 6;
+  cxt.fillStyle = "white";
+  cxt.fillRect(0,0, cvs.width, cvs.height);
+  sstomp.classList.add('hide');
+  rs.classList.add('hide');
+  fullPass.classList.add('hide');
+  // mediarecorderapi
+  navigator.mediaDevices.getUserMedia({ audio: true })
   .then(stream => {
     const mediaRecorder = new MediaRecorder(stream);
     
     
    
     
-    start.addEventListener('click',function(){
+    circleout.addEventListener('click',function(){
+    
      mediaRecorder.start();
+     
     console.log("recording has started");
      mediaRecorder.addEventListener("dataavailable", event => {
       audioChunks.push(event.data);
     });
     audioChunks = [];
-    start.disabled = true;
-    stop.disabled = false;
-    if(check1st == true){
-    audfrof += 1;
-    }
-    if(audfrof == 2){
-    url2 = true;
-    url1 = false
-    }
-    if(audfrof == 3){
-    url3 = true;
-    url2 = false
-    }
-    if(audfrof > 3){
-    audfrof = 1;
-    }
     
-   
+    pausenoob.classList.remove('hide');
+     circlein.classList.add('hide'); 
+     
+    //
+     //rob = true;
     })
     
     
     
     
-    stop.addEventListener('click',function(){
-    start.disabled = false;
-    stop.disabled = false;
+    pausenoob.addEventListener('click',function(){
+    
+circlein.classList.add('hide');
+    //rob = false;
     mediaRecorder.stop();
     console.log("recording has stoped");
     })
@@ -87,58 +878,191 @@ navigator.mediaDevices.getUserMedia({ audio: true })
       const audioBlob = new Blob(audioChunks);
       
       const audioUrl = URL.createObjectURL(audioBlob);
-      const audioUrl2 = URL.createObjectURL(audioBlob);
-      const audioUrl3 = URL.createObjectURL(audioBlob);
-      if(audfrof == 1){
+ 
       aud1.src = audioUrl;
-      check1st = true;
       audioChunks = [];
-      }
-      if(audfrof == 2){
-      audioChunks = [];
-      aud2.src = audioUrl2;
-      
-     
-      }
-      if(audfrof == 3){
-      audioChunks = [];
-      aud3.src = audioUrl3;
-      
-      
-      }
-      
     });
     
-    currentTime.addEventListener('change', function(){
-aud1.currentTime = currentTime.max / currentTime.val / 100;
-aud1.play()
-})
-    
-    function loop(){
-    requestAnimationFrame(loop);
-    var dur = aud1.duration;
-    
-    //console.log(dur);
-    /*if (aud1.duration > 0 && !aud1.paused) {
 
-    currentTime.value = aud1.currentTime / aud1.duration * 100;
-
-}*/
-
-
-
-
-//if (currentTime.value) {
-
-  //  aud1.currentTime = currentTime.value / 100;
-    //aud1.play()
-
-//}
-    console.log(aud1.currentTime)
-    //console.log(currentTime.value);
-    }
-   loop(); 
   });
   
   
-</script>
+  
+  
+  }
+  
+  function camapp(){
+  cxt.fillRect(0,0,cvs.width,cvs.height);
+  camp.classList.remove('hide');
+  pict.classList.remove('hide');
+  state.current = 4;
+  video.classList.remove('hide');
+  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUsermedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+  
+  if(navigator.getUserMedia){
+  navigator.getUserMedia({video:true},handleVideo,videoError);
+  }
+  
+  function handleVideo(stream){
+  video.src = video.srcObject = stream; video.play();
+  }
+  
+  function videoError(e){
+  
+  }
+  }
+  
+  function tp(){
+  pict.getContext("2d").drawImage(video, 0, 0, cvs.width, cvs.height);
+  }
+  
+  var ep = false;;
+  
+  //event listener
+  edge.addEventListener('touchmove', function(){
+  iedge.classList.remove('hide');
+  ep = true;
+  edge.classList.add('hide');
+  })
+  
+  cvs.addEventListener('click', function(){
+  if(ep == true){
+  ep = false;
+  iedge.classList.add('hide');
+  edge.classList.remove('hide');
+  }
+  })
+  
+  gmaps.addEventListener('click', function(){
+  if(ep == true){
+  ep = false;
+  iedge.classList.add('hide');
+  edge.classList.remove('hide');
+  }
+  })
+  
+  var appd = false;
+  var startt = true;
+  
+  // bacground
+  // https://wallpapercave.com/wp/wp7035759.jpg
+  
+  //time
+  const updateTime = () => {
+  
+  const currentTime = new Date();
+  
+ let  currentHour = currentTime.getHours();
+  const currentMinute = currentTime.getMinutes();
+  
+  if ( currentHour > 12){
+  
+  currentHour-=12;
+  };
+  
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  
+  var month = new Array(12);
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+  
+  var n = weekday[currentTime.getDay()];
+  var n2 = month[currentTime.getMonth()];
+  var n3 = currentTime.getDate();
+  
+  mon.textContent = n2 + " ";
+  day.textContent = n + ", ";
+  date.textContent = n3;
+  hour.textContent = currentHour.toString();
+  minute.textContent = currentMinute.toString().padStart(2, '0');
+  }
+  
+  var one = false;
+  var two = false;
+  var three = false;
+  var four = false;
+  var five = false;
+  var six = false;
+  var seven = false;
+  var eight = false;
+  var nine = false;
+  
+  
+  setInterval(updateTime, 1000);
+  updateTime();
+  
+  //rumble
+  function vibrate(ms){
+  navigator.vibrate(ms);
+  }
+  //loop
+  function loop(){
+
+ console.log(t1)
+ //console.log(localStorage.key(0))
+  localStorage.setItem("name", "true");
+  if(shelf == true){
+  localStorage.setItem("name", "true");
+  shelf = true
+  }
+  if(shelf == false){
+  localStorage.setItem("name", "false");
+  shelf = false
+  }
+  if(localStorage.name == "true"){
+  shelf = true
+  }
+  if(localStorage.name == "false"){
+  shelf = false
+  }
+  
+ 
+  requestAnimationFrame(loop);
+ if(rob == false){
+ circleout.classList.remove('hide');
+ pausenoob.classList.add('hide');
+ }
+ 
+  if(rob == true){
+ circlein.classList.add('hide');
+ pausenoob.classList.remove('hide');
+ }
+  draw();
+  //console.log(one)
+  console.log(state.current);
+  if(state.current == 0){
+  tt1 = true;
+  }
+  if(state.current == 0.1){
+  tt1 = false;
+  }
+if(state.current == 1 || state.current == 2 || state.current == 3){
+startt = false;
+}
+
+if(state.current == 0.1 || state.current == 0){
+startt = true;
+}
+  }
+  
+  loop();
+  </script>
+</body>
+</html>
